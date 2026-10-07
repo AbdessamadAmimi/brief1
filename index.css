@@ -1,0 +1,159 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.container {
+	width: 100%;
+	max-width: 1000px;
+	padding: 20px 40px;
+	margin: 0 auto;
+}
+header{
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 10px;
+    align-items: center;
+    height: 20px;
+}
+.head-button{
+    background-color: rgb(23, 117, 248);
+    padding: 1px 5px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    width: 120px;
+    margin-left: 170px;
+}
+header img{
+    width: 10%;
+    height: auto;
+}
+.list{
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    font-size: 13px;
+    
+}
+.list > li > a{
+    text-decoration: none;
+    color: black;
+}
+.title{
+    color: rgb(23, 117, 248);
+    position: relative;
+
+}
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    background-color: rgb(23, 117, 248);
+    width: 100%;
+    height: 2px;
+    
+}
+.rejoindre{
+    color: white;
+    text-decoration: none;
+}
+
+.description{
+    display: flex;
+    justify-content: end;
+    background-color: rgba(8, 18, 30);
+    height: 500px;
+}
+.partie2 > img{
+    height: 100%;
+    width: 100%;
+}
+.partie2{
+    width: 50%;
+}
+.yellow {
+  color: #baff3c;
+  font-size: 64px;
+  font-weight: 900;
+  position: absolute;
+  top: 70px;
+  left: 200px;
+}
+.partie1{
+    padding: 40px 0 0 70px;
+}
+.partie1 > p{
+    color: white;
+    font-weight: bolder;
+    font-size: 70px;
+    position: relative;
+}
+.partie1 > p > .blue{
+    color: rgb(23, 117, 248);
+}
+.partie1 > .titre{
+    font-size: 30px;
+}
+.partie1 > .p-content{
+    font-size: 15px;
+    font-weight: 50;
+    width: 50%;
+    margin: 20px 0;
+}
+.liens{
+    display: flex;
+    gap: 40px;
+}
+.liens > .btn{
+    padding: 12px 18px;
+    border-radius: 3px;
+    border:solid 1px rgb(23, 117, 248);
+}
+.liens > .btn1{
+    background-color: rgb(23, 117, 248);
+}
+.liens > .btn2{
+    background-color: transparent;
+    color: white;
+}
+.partie1 > .bas{
+    color: white;
+}
+.bas{
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+}
+.bas > .letter{
+    display: flex;
+}
+.bas > .letter > .p{
+    margin-left: -3px;
+    color: black;
+    font-weight: bold;
+}
+.bas > .letter > .p1{
+    padding: 0 12px;
+    background-color: rgb(201, 240, 243);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.bas > .letter > .p2{
+    padding: 0 13px;
+    background-color: rgb(248, 232, 203);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+}
+.stats{
+    
+}
