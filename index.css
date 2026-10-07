@@ -14,10 +14,13 @@ html{
 	margin: 0 auto;
 }
 header{
+    padding: 0 200px;
+}
+.nav-bar{
     backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-around;
-    margin: 20px 10px;
+    justify-content: space-between;
+    margin: 20px 0;
     align-items: center;
     height: 20px;
 }
@@ -30,9 +33,8 @@ header{
     font-weight: 600;
     font-size: 12px;
     width: 120px;
-    margin-left: 170px;
 }
-header img{
+.nav-bar img{
     width: 10%;
     height: auto;
 }
@@ -65,20 +67,22 @@ header img{
     color: white;
     text-decoration: none;
 }
-
-.description{
-    display: flex;
-    justify-content: end;
+.hero{
     background-color: rgba(8, 18, 30);
     height: 500px;
+    padding: 0 200px;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: fit-content;
 }
 .partie2 > img{
-    height: 100%;
-    width: 100%;
+    height: 500px;
 }
-.partie2{
-    width: 50%;
-}
+
 .yellow {
   color: #baff3c;
   font-size: 64px;
@@ -88,7 +92,7 @@ header img{
   left: 200px;
 }
 .partie1{
-    padding: 40px 0 0 70px;
+    padding: 30px 0;
 }
 .partie1 > p{
     color: white;
@@ -104,8 +108,8 @@ header img{
 }
 .partie1 > .p-content{
     font-size: 15px;
+    width: 300px;
     font-weight: 50;
-    width: 50%;
     margin: 20px 0;
 }
 .liens{
@@ -154,6 +158,36 @@ header img{
     display: flex;
     align-items: center;
 }
+.stats-section{
+    padding: 0 200px;
+}
 .stats{
-    
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0px;
+}
+.stats > .line-v{
+    background-color: black;
+    width: 2px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stats > .st{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.st > span > i{
+    font-size: 30px;
+    color: rgb(23, 117, 248);
+}
+.st > span > .nbr{
+    font-size: 40px;
+    font-weight: bold;
+}
+.st > span > .txt{
+    font-size: 13px;
+    color: gray;
 }
