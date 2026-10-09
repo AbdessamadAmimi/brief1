@@ -335,7 +335,7 @@ header{
     font-size: 10px;
 }
 .chemin > .icons > i{
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 35px;
