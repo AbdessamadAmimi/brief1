@@ -38,8 +38,13 @@
     </div>
 
     <div class="formulaire">
-        <form action="">
-
+        <form action="" onsubmit="SaveData(event)">
+            <div class="error display-none">
+                <p>Veuillez remplir tous les champs du formulaire</p>
+            </div>
+            <div class="success display-none">
+                <p>Ton inscription a bien été prise en compte</p>
+            </div>
             <label for="" class="label1">Nom</label> <br>
             <input class="nom-input" placeholder="label" type="text"> <br>
 
@@ -52,9 +57,10 @@
             <label for="" class="label4">Telephone</label> <br>
             <input class="tele-input" placeholder="label" type="tel"> <br>
 
-            <input type="radio" name="" id="safi"> <label for="">Safi</label> <br>
-            <input type="radio" name="" id="youssoufia"> <label for="">Youssoufia</label> <br>
-            <input type="radio" name="" id="nador"> <label for="">Nador</label> <br>
+            <input value="Safi" type="radio" class="city" name="city" id="safi"> <label for="">Safi</label> <br>
+            <input value="Youssoufia" type="radio" class="city" name="city" id="youssoufia"> <label
+                for="">Youssoufia</label> <br>
+            <input value="Nador" type="radio" class="city" name="city" id="nador"> <label for="">Nador</label> <br>
 
             <button>S'inscrire</button>
         </form>
@@ -108,5 +114,44 @@
         </section>
     </footer>
 </body>
+
+<script type="text/javascript">
+    function SaveData(event) {
+        event.preventDefault();
+        let nom = document.querySelector(".nom-input");
+        let prenom = document.querySelector(".prenom-input");
+        let email = document.querySelector(".email-input");
+        let telephone = document.querySelector(".tele-input");
+        let cities_radio = document.querySelectorAll('.city');
+        let city = "";
+        cities_radio.forEach(radio => {
+            if (radio.checked) city = radio.value;
+        })
+        // city = document.querySelector(".city:checked").value;
+
+        if (nom.value == "" || prenom.value == "" || email.value == "" || telephone.value == "" || city == "") {
+            document.querySelector(".error").classList.remove("display-none");
+            document.querySelector(".success").classList.add("display-none");
+            return;
+        }
+
+        localStorage.setItem('First name', nom.value);
+        localStorage.setItem('Last name', prenom.value);
+        localStorage.setItem('Email', email.value);
+        localStorage.setItem('Phone Number', telephone.value);
+        localStorage.setItem('Campus', city);
+
+        nom.value = "";
+        prenom.value = ""
+        email.value = "";
+        telephone.value = "";
+        document.querySelectorAll(".city").forEach(element => {
+            element.checked = false;
+        });
+        document.querySelector(".success").classList.remove("display-none");
+        document.querySelector(".error").classList.add("display-none");
+
+    }
+</script>
 
 </html>

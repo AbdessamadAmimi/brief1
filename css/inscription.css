@@ -179,3 +179,26 @@ form button{
     color: rgba(128, 128, 128, 0.625);
     border: 1px rgba(128, 128, 128, 0.653) solid;
 }
+.error{
+    width: 600px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    padding: 6px 15px;
+    margin: 10px 0px;
+}
+.success{
+    width: 600px;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    background-color: green;
+    font-size: 20px;
+    padding: 6px 15px;
+    margin: 10px 0px;
+}
+.display-none{
+    display: none;
+}
