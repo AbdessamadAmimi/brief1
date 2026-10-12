@@ -134,22 +134,32 @@
             document.querySelector(".success").classList.add("display-none");
             return;
         }
+        let setInfo = {
+            input_nom: nom.value,
+            input_prenom: prenom.value,
+            input_email: email.value,
+            input_tel: telephone.value,
+            input_city: city
+        }
+        let data_info = []
+        data_info = JSON.parse(localStorage.getItem("db")) || [];
+        data_info.push(setInfo);
+        localStorage.setItem("db" , JSON.stringify(data_info));
+        // localStorage.setItem('First name', nom.value);
+        // localStorage.setItem('Last name', prenom.value);
+        // localStorage.setItem('Email', email.value);
+        // localStorage.setItem('Phone Number', telephone.value);
+        // localStorage.setItem('Campus', city);
 
-        localStorage.setItem('First name', nom.value);
-        localStorage.setItem('Last name', prenom.value);
-        localStorage.setItem('Email', email.value);
-        localStorage.setItem('Phone Number', telephone.value);
-        localStorage.setItem('Campus', city);
-
-        nom.value = "";
-        prenom.value = ""
-        email.value = "";
-        telephone.value = "";
-        document.querySelectorAll(".city").forEach(element => {
-            element.checked = false;
-        });
-        document.querySelector(".success").classList.remove("display-none");
-        document.querySelector(".error").classList.add("display-none");
+        // nom.value = "";
+        // prenom.value = ""
+        // email.value = "";
+        // telephone.value = "";
+        // document.querySelectorAll(".city").forEach(element => {
+        //     element.checked = false;
+        // });
+        // document.querySelector(".success").classList.remove("display-none");
+        // document.querySelector(".error").classList.add("display-none");
 
     }
 </script>
